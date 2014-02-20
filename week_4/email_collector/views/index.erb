@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Welcome to my email collector</title>
+
+    <style>
+      body {
+        background-color: <%= session[:color] || '#fff' %>;
+      }
+
+    </style> 
+  </head>
+  <body>
+    <% @users.each do |user| %>
+      <%= user.email %>
+    <% end %>
+
+    <form action="/save_email" method="post">
+      <input type="text" name="email"/>
+      <input type="submit" value="Send" />
+    </form>
+
+    <a href="/set_color?color=red">Red</a>
+    <a href="/set_color?color=blue">Blue</a>
+    <a href="/set_color?color=green">Green</a>
+  </body>
+</html>
