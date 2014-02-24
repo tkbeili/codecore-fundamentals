@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+
 gem 'sinatra'
 gem 'data_mapper'
 gem 'pony'
+gem 'dm-sqlite-adapter'
