@@ -1,0 +1,18 @@
+<html>
+<head> 
+  <title>Welcome to Contacter App</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/<%= session[:css] %>.css">
+</head>
+<body>
+  Hello <%= session[:name] %>
+  <hr>
+  <a href="/css/bootstrap-yellow"> Yellow </a>
+  <a href="/css/bootstrap-red"> Red </a>
+  <a href="/css/bootstrap-green"> Green </a>
+
+  You visited home page: <%= session[:visit_count] || 0 %> time(s)
+  <hr>
+  <%= yield %>
+</body>
+</html>

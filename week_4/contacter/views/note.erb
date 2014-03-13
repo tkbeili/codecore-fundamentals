@@ -1,0 +1,9 @@
+<h1>Add a note to <%= @contact.first_name %></h1>
+
+<form method="post" action="/note/<%= @contact.id %>">
+
+  <textarea name="note"></textarea>
+  <br>
+  <input type="submit" value="Save Note" />
+
+</form>
